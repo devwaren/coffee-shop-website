@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.bg-slate {
+    background-image: url('/bg-slate.png');
+}
+
+.min-h-720px {
+    min-height: 720px;
+}
