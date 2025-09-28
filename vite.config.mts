@@ -21,5 +21,20 @@ export default defineConfig({
                 "trusted-types vanillaTSPolicy;"
             ].join(" ")
         }
-    }
+    },
+    build: {
+        rollupOptions: {
+            external: [
+                'fs',
+                'fs/promises',
+                'os',
+                'stream',
+                'events',
+                'node:path',
+                'node:fs/promises',
+                'node:stream',
+                'path'
+            ],
+        },
+    },
 })
