@@ -54,7 +54,6 @@ if (!isDev) {
     } else {
       res.setHeader("Content-Security-Policy", csp);
     }
-
     next();
   });
 }
