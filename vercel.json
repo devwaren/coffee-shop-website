@@ -2,17 +2,18 @@
     "version": 2,
     "builds": [
         {
-            "src": "server.ts",
+            "src": "/server.ts",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
+            "src": "/robots.txt",
+            "dest": "/robots.txt"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/server.ts",
-            "headers": {
-                "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; style-src-attr 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self'; require-trusted-types-for 'script'; trusted-types vanillaTSPolicy;"
-            }
+            "dest": "/server.ts"
         }
     ]
 }
