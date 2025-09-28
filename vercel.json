@@ -11,7 +11,7 @@
             "src": "/(.*)",
             "dest": "/server.ts",
             "headers": {
-                "Content-Security-Policy": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; require-trusted-types-for 'script'; trusted-types vanillaTSPolicy;"
+                "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; style-src-attr 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self'; require-trusted-types-for 'script'; trusted-types vanillaTSPolicy;"
             }
         }
     ]
